@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --global-black: rgb(39, 36, 31);
+    --orange1: rgb(255, 198, 0);
+    --red1: rgb(255, 116, 72);
+    --yellow2: rgb(251, 232, 100);
+    --orange2: rgb(255, 185, 91);
+    --green3: rgb(51, 153, 143);
+    --blue3: rgb(133, 196, 196);
+    --pink4: rgb(254, 181, 188);
+    --red4: rgb(249, 127, 129);
+    --yellow5: rgb(240, 230, 56);
+    --green5: rgb(128, 182, 0);
+    --lightblue6: rgb(52, 198, 250);
+    --darkblue6: rgb(0, 116, 211);
+    --mainText: rgb(128, 128, 128);
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
+}
