@@ -17,10 +17,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
+
+const io = new Server(server,{
     cors: {
-        origin: ['http://localhost:5173', 'http://localhost:5050'],
-        methods: ['GET', 'POST']
+        origin: '*',
+        methods: '*'
     }
 });
 
@@ -38,9 +39,7 @@ async function connectToDatabase() {
     }
 }
 
-app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5050']
-}));
+// app.use(cors());
 
 app.use(express.json());
 
@@ -73,7 +72,7 @@ app.post('/collection/:name', async (req, res) => {
 let waitingUsers = [[], [], []];
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('[*] a user connected');
 
     socket.on('joinRoom', (lobbyIndex) => {
         const userId = socket.id;
@@ -90,7 +89,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         waitingUsers = waitingUsers.map(lobby => lobby.filter(user => user !== socket.id));
         io.emit('waitingUsersUpdate', waitingUsers);
-        console.log('user disconnected');
+        console.log('[*] user disconnected');
     });
 });
 

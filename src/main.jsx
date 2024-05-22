@@ -6,12 +6,20 @@ import MathPage from './pages/MathPage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import { AuthProvider } from "@propelauth/react";
 import Serverlist from './pages/ServerList.jsx';
-import './main.css'
+import './main.css';
 import WaitingRoom from './pages/WaitingRoom.jsx';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+// import dotenv from 'dotenv';
+// import path from 'path';
+
+
+// dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
 
 const authUrl = "https://8665905.propelauthtest.com";
-console.log('Auth URL:', authUrl);
-console.log(authUrl)
+
+// const authUrl = process.env.PROPEL_APP_AUTH_URL
+// console.log(authUrl)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
