@@ -13,7 +13,7 @@ import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 const authUrl = import .meta.env.VITE_PROPEL_API
 
 
-
+console.log("accsing to main.jsx")
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider authUrl={authUrl}>
