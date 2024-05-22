@@ -44,7 +44,7 @@ async function connectToDatabase() {
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Welcome to BubbleMath API');
+    res.send('Welcome to BubbleMath API -  ExpressJS Backend');
 });
 
 app.get('/questions', async (req, res) => {
