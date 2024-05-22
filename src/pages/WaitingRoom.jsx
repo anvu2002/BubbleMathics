@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 import './WaitingRoom.css';
 
-const socket = io('http://localhost:5050');
+const socket = io('https://bubblemathics.study');
 
 const WaitingRoom = () => {
     const [waitingUsers, setWaitingUsers] = useState([[], [], []]);

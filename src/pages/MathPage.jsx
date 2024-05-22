@@ -17,7 +17,7 @@ const MathPage = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await axios.get('http://localhost:5050/questions');
+                const response = await axios.get('https://bubblemathics.study/questions');
                 setQuestions(response.data);
                 setLoading(false);
             } catch (err) {

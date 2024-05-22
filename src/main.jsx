@@ -13,10 +13,6 @@ import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 const authUrl = import .meta.env.VITE_PROPEL_API
 
 
-// const authUrl = "https://8665905.propelauthtest.com";
-
-// const authUrl = process.env.REACT_APP_PROPEL_APP_AUTH_URL
-// console.log(authUrl)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
