@@ -39,7 +39,7 @@ async function connectToDatabase() {
     }
 }
 
-// app.use(cors());
+app.use(cors());
 
 app.use(express.json());
 

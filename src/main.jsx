@@ -14,6 +14,7 @@ const authUrl = import .meta.env.VITE_PROPEL_API
 
 
 console.log("accsing to main.jsx")
+console.log("authUrl = ",authUrl)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
