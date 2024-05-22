@@ -10,11 +10,11 @@ import './main.css';
 import WaitingRoom from './pages/WaitingRoom.jsx';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
-const authUrl = import .meta.env.VITE_PROPEL_API
+const environment = import.meta.env.VITE_ENVIRONMENT;
 
-
-console.log("accsing to main.jsx")
-console.log("authUrl = ",authUrl)
+const authUrl = environment === "PROD"
+  ? import.meta.env.VITE_PROPEL_API_PROD
+  : import.meta.env.VITE_PROPEL_API_DEV;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
