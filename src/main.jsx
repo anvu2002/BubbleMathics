@@ -6,7 +6,7 @@ import MathPage from './pages/MathPage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import { AuthProvider } from "@propelauth/react";
 import Serverlist from './pages/ServerList.jsx';
-import './index.css'
+import './main.css'
 import WaitingRoom from './pages/WaitingRoom.jsx';
 
 const authUrl = "https://8665905.propelauthtest.com";
