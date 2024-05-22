@@ -9,16 +9,13 @@ import Serverlist from './pages/ServerList.jsx';
 import './main.css';
 import WaitingRoom from './pages/WaitingRoom.jsx';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
-// import dotenv from 'dotenv';
-// import path from 'path';
+
+const authUrl = import .meta.env.VITE_PROPEL_API
 
 
-// dotenv.config({ path: path.resolve(__dirname, '../.env') });
+// const authUrl = "https://8665905.propelauthtest.com";
 
-
-const authUrl = "https://8665905.propelauthtest.com";
-
-// const authUrl = process.env.PROPEL_APP_AUTH_URL
+// const authUrl = process.env.REACT_APP_PROPEL_APP_AUTH_URL
 // console.log(authUrl)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
