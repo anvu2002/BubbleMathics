@@ -14,10 +14,10 @@ const authUrl = import .meta.env.VITE_PROPEL_API
 
 
 console.log("accsing to main.jsx")
-console.log(authUrl)
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <AuthProvider authUrl={authUrl}> */}
+    <AuthProvider authUrl={authUrl}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -28,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       </Routes>
     </BrowserRouter>
-    {/* </AuthProvider> */}
+    </AuthProvider>
   </React.StrictMode>,
 )

@@ -23,6 +23,7 @@ const container = {
   },
 };
 
+console.log("Access to HomePage.jsx")
 const HomePage = withAuthInfo((props) => {
   const logoutFunction = useLogoutFunction();
   const { redirectToLoginPage, redirectToSignupPage, redirectToAccountPage } = useRedirectFunctions();
