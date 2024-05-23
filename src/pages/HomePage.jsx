@@ -23,7 +23,6 @@ const container = {
   },
 };
 
-console.log("Access to HomePage.jsx")
 const HomePage = withAuthInfo((props) => {
   const logoutFunction = useLogoutFunction();
   const { redirectToLoginPage, redirectToSignupPage, redirectToAccountPage } = useRedirectFunctions();
@@ -36,6 +35,9 @@ const HomePage = withAuthInfo((props) => {
           <li><a href="/" id='navLogo'><img className="logo" src="/logo_light.png" alt="Logo" /></a></li>
           <li><a href="/waitingroom" id='challengesNav'>Challenges</a></li>
           <li><a href="/results" id="resultsNav">Results</a></li>
+          <li>
+              <button id="teacher-button" onClick={() => redirectToTeacherPage()}>For Teacher</button>
+          </li>
           {props.isLoggedIn ? (
             <li>
               Welcome {props.user.email} 
